@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h3 th:text="'Dear Users, '"></h3>
+<br>
+<div>
+    Ticket <a th:href="'http://localhost:8080/help-desk/tickets/' + ${ticket.id} + '/'" th:text="${ticket.id}"></a>
+    was canceled by the Engineer.
+</div>
+</body>
+</html>

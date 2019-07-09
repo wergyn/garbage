@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h3 th:text="'Dear ' + ${ticket.owner.firstName} + ' ' + ${ticket.owner.lastName}"></h3>
+<br>
+<div>
+    <span>Ticket <a th:href="'http://localhost:8080/help-desk/tickets/' + ${ticket.id} + '/'"
+                    th:text="${ticket.id}"></a>
+        was approved by the Manager.</span>
+    <span>Please provide your feedback clicking on the ticket ID.</span>
+</div>
+</body>
+</html>
